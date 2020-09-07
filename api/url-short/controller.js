@@ -9,6 +9,7 @@ exports.shortenURL = asyncHandler(async (req, res, next)=>{
     if(!req.body.expirationTime) {
         expirationTime = new Date();
         expirationTime.setMinutes( expirationTime.getMinutes() + 30 );
+        //Default expire time as 30mins
     }
     console.log(req.body);
     const shortUrl = await nanoid(6);
