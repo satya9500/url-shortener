@@ -7,5 +7,6 @@ exports.getMe = asyncHandler(async (req, res, next) => {
     res.status(200).json({
         success: true,
         data: user,
+        api_key: user._id
     });
 });

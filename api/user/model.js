@@ -26,11 +26,6 @@ const userSchema = new mongoose.Schema({
         required: [true, 'Please provide a username'],
         unique: true,
     },
-    role: {
-      type: mongoose.Schema.ObjectId,
-      ref: 'Role',
-      required: true
-    },
     createdAt: {
         type: Date,
         default: Date.now

@@ -32,3 +32,14 @@ exports.protect = asyncHandler(async (req, res, next) => {
     }
 });
 
+exports.protectWithApi = asyncHandler(async (req, res, next) => {
+    const {api_key} = req.body;
+    if (!api_key.match(/^[0-9a-fA-F]{24}$/)) {
+        return next(new ErrorResponse('Invalid API KEY', 400));
+    }
+    req.user = await User.findById(api_key);
+    if(!req.user)
+        return next(new ErrorResponse('Invalid API KEY', 400));
+    next();
+});
+

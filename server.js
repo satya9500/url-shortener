@@ -16,6 +16,7 @@ require('colors');
 // route files
 const auth = require('./api/auth')
 const user = require('./api/user')
+const url = require('./api/url-short')
 // load env variables
 const app = express();
 // Body Parser
@@ -59,7 +60,7 @@ app.use(express.static(path.join(__dirname, './public'), options));
 // All other routes should redirect to the index.html
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/user', user);
-
+app.use('/api/v1/url', url);
 // app.get('*.*', express.static('./public/frontend')); // production
 
 // app.all('*', (req, res) => {

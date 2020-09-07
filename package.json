@@ -11,11 +11,10 @@
     "url": "git+https://github.com/aitoss/oss-website-backend.git"
   },
   "keywords": [
-    "OSS",
-    "AIT",
-    "OSS-WEBSITE"
+    "URL Shortener",
+    "shorty"
   ],
-  "author": "OSS Team",
+  "author": "Satya - CEO",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/aitoss/oss-website-backend/issues"
@@ -32,6 +31,7 @@
     "helmet": "^4.1.0",
     "hpp": "^0.2.3",
     "mongoose": "^5.10.2",
+    "nanoid": "^3.1.12",
     "xss-clean": "^0.1.1"
   },
   "devDependencies": {
